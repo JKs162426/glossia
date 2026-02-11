@@ -56,10 +56,6 @@ header {
     border-radius: 5px;
     cursor: pointer;
 
-    & img {
-      height: 40px;
-    }
-
     &:hover {
       background-color: #fff085;
     }

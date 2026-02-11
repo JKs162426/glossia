@@ -9,17 +9,16 @@ export function applyLanguage() {
   const lang = getLang();
   const dict = translations[lang];
 
-  // Cambia textos por data-i18n
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     const value = getValue(dict, key);
     if (typeof value === "string") el.textContent = value;
   });
 
-  // Actualiza botón
-  const btn = document.querySelector("#lang-toggle");
-  if (btn) btn.textContent = lang.toUpperCase();
+  const label = document.querySelector("#lang-toggle");
+  if (label) {
+    label.textContent = translations[lang].langBtn;
+  }
 
-  // (Opcional) cambia atributo lang del HTML
   document.documentElement.lang = lang;
 }

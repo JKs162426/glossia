@@ -9,7 +9,7 @@ export const translations = {
       flashcards: "Flashcards",
       favorites: "Favorite Words",
     },
-    langBtn: "EN",
+    langBtn: "ENGLISH/SPANISH",
   },
   es: {
     welcomeTitle: "Bienvenido a Glossia",
@@ -21,6 +21,6 @@ export const translations = {
       flashcards: "Tarjetas",
       favorites: "Palabras favoritas",
     },
-    langBtn: "ES",
+    langBtn: "ESPAÑOL/INGLÉS",
   },
 };
