@@ -3,16 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Glossia - Your app to learn languages." />
-    <title>Glossia</title>
-    <link rel="stylesheet" href="/src/css/style.css" />
-    <link rel="icon" href="" type="image/svg+xml" />
-    <script type="module" src="/src/js/main.js"></script>
+    <title>Glossia - Translator</title>
+
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <script type="module" src="../src/js/translator.js"></script>
   </head>
 
   <body>
     <header class="divider" id="main-header"></header>
-    <main class="divider"></main>
+
+    <main class="divider">
+      <section class="translator">
+        <h1 data-i18n="translator.title"></h1>
+
+        <div class="translator-grid">
+          <div class="translator-panel">
+            <div class="translator-bar">
+              <label
+                for="from-lang"
+                class="sr-only"
+                data-i18n="translator.from"
+              ></label>
+              <select id="from-lang"></select>
+            </div>
+
+            <textarea
+              id="source-text"
+              rows="8"
+              data-i18n-placeholder="translator.placeholder"
+              placeholder="Type text..."
+            ></textarea>
+
+            <div class="translator-meta">
+              <span id="char-count">0</span>
+              <button
+                id="clear-btn"
+                type="button"
+                data-i18n="translator.clear"
+              ></button>
+            </div>
+          </div>
+
+          <div class="translator-middle">
+            <button
+              id="swap-btn"
+              type="button"
+              aria-label="Swap languages"
+              title="Swap"
+            >
+              ⇄
+            </button>
+          </div>
+
+          <div class="translator-panel">
+            <div class="translator-bar">
+              <label
+                for="to-lang"
+                class="sr-only"
+                data-i18n="translator.to"
+              ></label>
+              <select id="to-lang"></select>
+            </div>
+
+            <div
+              id="translated-text"
+              class="translated-box"
+              aria-live="polite"
+            ></div>
+
+            <div class="translator-meta">
+              <span id="status"></span>
+              <button
+                id="copy-btn"
+                type="button"
+                data-i18n="translator.copy"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <footer id="main-footer"></footer>
   </body>
 </html>

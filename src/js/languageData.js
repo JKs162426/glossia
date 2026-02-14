@@ -10,3 +10,13 @@ export const popularLanguages = [
   { code: "ko", name: "한국어 (Korean)" },
   { code: "ru", name: "Русский (Russian)" },
 ];
+
+const KEY = "glossia_target_lang";
+
+export function getTargetLang() {
+  return localStorage.getItem(KEY) || "en";
+}
+
+export function setTargetLang(code) {
+  localStorage.setItem(KEY, code);
+}

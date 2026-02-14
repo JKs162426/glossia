@@ -10,6 +10,41 @@ export const translations = {
       favorites: "Favorite Words",
     },
     langBtn: "ENGLISH/SPANISH",
+
+    translator: {
+      title: "Translator",
+      from: "From",
+      to: "To",
+      clear: "Clear",
+      copy: "Copy",
+      placeholder: "Type here...",
+    },
+
+    categories: {
+      title: "Categories",
+      list: {
+        greetings: "Greetings",
+        food: "Food",
+        travel: "Travel",
+        family: "Family",
+        jobs: "Jobs",
+        health: "Health",
+        numbers: "Numbers",
+        time: "Time",
+        weather: "Weather",
+        shopping: "Shopping",
+        school: "School",
+        technology: "Technology",
+        sports: "Sports",
+        house: "House",
+        emotions: "Emotions",
+      },
+    },
+
+    footer: {
+      rights: "© 2026 Glossia. All rights reserved.",
+      madeBy: "Made by Jesus Figueroa 🇻🇪 ",
+    },
   },
   es: {
     welcomeTitle: "Bienvenido a Glossia",
@@ -22,5 +57,40 @@ export const translations = {
       favorites: "Palabras favoritas",
     },
     langBtn: "ESPAÑOL/INGLÉS",
+
+    translator: {
+      title: "Traductor",
+      from: "De",
+      to: "A",
+      clear: "Borrar",
+      copy: "Copiar",
+      placeholder: "Escribe aquí...",
+    },
+
+    categories: {
+      title: "Categorías",
+      list: {
+        greetings: "Saludos",
+        food: "Comida",
+        travel: "Viajes",
+        family: "Familia",
+        jobs: "Trabajos",
+        health: "Salud",
+        numbers: "Números",
+        time: "Tiempo",
+        weather: "Clima",
+        shopping: "Compras",
+        school: "Escuela",
+        technology: "Tecnología",
+        sports: "Deportes",
+        house: "Casa",
+        emotions: "Emociones",
+      },
+    },
+
+    footer: {
+      rights: "© 2026 Glossia. Todos los derechos reservados.",
+      madeBy: "Hecho por Jesus Figueroa 🇻🇪 ",
+    },
   },
 };
