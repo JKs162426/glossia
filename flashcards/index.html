@@ -7,12 +7,69 @@
     <title>Glossia</title>
     <link rel="stylesheet" href="/src/css/style.css" />
     <link rel="icon" href="" type="image/svg+xml" />
-    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/flashcards.js"></script>
   </head>
 
   <body>
     <header class="divider" id="main-header"></header>
-    <main class="divider"></main>
+    <main class="divider">
+      <section class="flashcards">
+        <h1 data-i18n="flashcards.title"></h1>
+
+        <div class="flashcards-top">
+          <label for="target-lang" data-i18n="flashcards.learning"></label>
+          <select id="target-lang"></select>
+
+          <label for="deck" data-i18n="flashcards.deck"></label>
+          <select id="deck"></select>
+
+          <button
+            id="load-deck"
+            type="button"
+            data-i18n="flashcards.load"
+          ></button>
+        </div>
+
+        <div class="card-wrap">
+          <button id="prev" type="button" aria-label="Previous">‹</button>
+
+          <div
+            id="card"
+            class="flashcard"
+            tabindex="0"
+            role="button"
+            aria-label="Flip card"
+          >
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <div class="tag" data-i18n="flashcards.front"></div>
+                <div id="frontText" class="big"></div>
+              </div>
+              <div class="flashcard-face flashcard-back">
+                <div class="tag" data-i18n="flashcards.back"></div>
+                <div id="backText" class="big"></div>
+              </div>
+            </div>
+          </div>
+
+          <button id="next" type="button" aria-label="Next">›</button>
+        </div>
+
+        <div class="flashcards-bottom">
+          <span id="progress"></span>
+          <button
+            id="shuffle"
+            type="button"
+            data-i18n="flashcards.shuffle"
+          ></button>
+          <button
+            id="reset"
+            type="button"
+            data-i18n="flashcards.reset"
+          ></button>
+        </div>
+      </section>
+    </main>
     <footer id="main-footer"></footer>
   </body>
 </html>

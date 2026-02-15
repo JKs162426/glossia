@@ -41,6 +41,26 @@ export const translations = {
       },
     },
 
+    flashcards: {
+      title: "Flashcards",
+      learning: "Learning language",
+      deck: "Deck",
+      load: "Build deck",
+      front: "EN",
+      back: "TARGET",
+      shuffle: "Shuffle",
+      reset: "Reset",
+    },
+
+    favorites: {
+      title: "Favorite Words",
+      learning: "Learning language",
+      search: "Search favorites...",
+      word: "Word",
+      translation: "Translation",
+      add: "Add",
+    },
+
     footer: {
       rights: "© 2026 Glossia. All rights reserved.",
       madeBy: "Made by Jesus Figueroa 🇻🇪 ",
@@ -86,6 +106,26 @@ export const translations = {
         house: "Casa",
         emotions: "Emociones",
       },
+    },
+
+    flashcards: {
+      title: "Tarjetas",
+      learning: "Idioma a aprender",
+      deck: "Tema",
+      load: "Crear deck",
+      front: "EN",
+      back: "OBJETIVO",
+      shuffle: "Mezclar",
+      reset: "Reiniciar",
+    },
+
+    favorites: {
+      title: "Palabras favoritas",
+      learning: "Idioma a aprender",
+      search: "Buscar favoritas...",
+      word: "Palabra",
+      translation: "Traducción",
+      add: "Agregar",
     },
 
     footer: {

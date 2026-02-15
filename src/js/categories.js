@@ -12,7 +12,16 @@ document.addEventListener("DOMContentLoaded", async () => {
   applyLanguage();
   renderCategories();
   initTargetLanguageSelector();
+  wireHeaderLangToggle();
 });
+
+function wireHeaderLangToggle() {
+  const btn = document.querySelector("#lang-toggle");
+  btn?.addEventListener("click", () => {
+    toggleLang();
+    applyLanguage();
+  });
+}
 
 function renderCategories() {
   const container = document.querySelector("#categories-list");

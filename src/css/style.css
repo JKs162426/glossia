@@ -198,3 +198,83 @@ footer {
   position: absolute;
   left: -9999px;
 };
+
+.card-wrap {
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  gap: 1rem;
+  align-items: center;
+}
+
+.flashcard {
+  perspective: 1000px;
+  user-select: none;
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  min-height: 220px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+}
+
+.flashcard.flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+.flashcard-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  background: white;
+  display: grid;
+  align-content: center;
+  gap: 0.75rem;
+}
+
+.flashcard-back {
+  transform: rotateY(180deg);
+}
+
+.big { font-size: 1.6rem; }
+.tag { font-size: 0.85rem; opacity: 0.7; }
+
+.favorites-top, .favorites-form {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0.75rem 0;
+}
+
+.favorites-list {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.favorite-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: white;
+}
+
+.fav-translation { opacity: 0.85; }
+.fav-meta { font-size: 0.85rem; opacity: 0.7; }
+
+button.danger {
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+}
+.muted { opacity: 0.7; }

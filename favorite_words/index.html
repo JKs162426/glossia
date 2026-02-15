@@ -7,12 +7,47 @@
     <title>Glossia</title>
     <link rel="stylesheet" href="/src/css/style.css" />
     <link rel="icon" href="" type="image/svg+xml" />
-    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/favorites.js"></script>
   </head>
 
   <body>
     <header class="divider" id="main-header"></header>
-    <main class="divider"></main>
+    <main class="divider">
+      <section class="favorites">
+        <h1 data-i18n="favorites.title"></h1>
+
+        <div class="favorites-top">
+          <label for="target-lang" data-i18n="favorites.learning"></label>
+          <select id="target-lang"></select>
+
+          <input
+            id="search"
+            type="search"
+            data-i18n-placeholder="favorites.search"
+            placeholder="Search..."
+          />
+        </div>
+
+        <form id="fav-form" class="favorites-form">
+          <input
+            id="fav-word"
+            type="text"
+            data-i18n-placeholder="favorites.word"
+            placeholder="Word"
+            required
+          />
+          <input
+            id="fav-translation"
+            type="text"
+            data-i18n-placeholder="favorites.translation"
+            placeholder="Translation"
+          />
+          <button type="submit" data-i18n="favorites.add"></button>
+        </form>
+
+        <div id="favorites-list" class="favorites-list"></div>
+      </section>
+    </main>
     <footer id="main-footer"></footer>
   </body>
 </html>
