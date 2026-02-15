@@ -12,7 +12,7 @@ export const translations = {
     langBtn: "ENGLISH/SPANISH",
 
     translator: {
-      title: "Translator",
+      title: "Glossia Translator",
       from: "From",
       to: "To",
       clear: "Clear",
@@ -21,7 +21,7 @@ export const translations = {
     },
 
     categories: {
-      title: "Categories",
+      title: "Glossia Categories",
       list: {
         greetings: "Greetings",
         food: "Food",
@@ -42,7 +42,7 @@ export const translations = {
     },
 
     flashcards: {
-      title: "Flashcards",
+      title: "Glossia Flashcards",
       learning: "Learning language",
       deck: "Deck",
       load: "Build deck",
@@ -53,7 +53,7 @@ export const translations = {
     },
 
     favorites: {
-      title: "Favorite Words",
+      title: "Your Glossia Favorite Words",
       learning: "Learning language",
       search: "Search favorites...",
       word: "Word",
@@ -79,7 +79,7 @@ export const translations = {
     langBtn: "ESPAÑOL/INGLÉS",
 
     translator: {
-      title: "Traductor",
+      title: "Traductor Glossia",
       from: "De",
       to: "A",
       clear: "Borrar",
@@ -88,7 +88,7 @@ export const translations = {
     },
 
     categories: {
-      title: "Categorías",
+      title: "Categorías Glossia",
       list: {
         greetings: "Saludos",
         food: "Comida",
@@ -109,7 +109,7 @@ export const translations = {
     },
 
     flashcards: {
-      title: "Tarjetas",
+      title: "Tarjetas Glossia",
       learning: "Idioma a aprender",
       deck: "Tema",
       load: "Crear deck",
@@ -120,7 +120,7 @@ export const translations = {
     },
 
     favorites: {
-      title: "Palabras favoritas",
+      title: "Tus Palabras favoritas en Glossia",
       learning: "Idioma a aprender",
       search: "Buscar favoritas...",
       word: "Palabra",
