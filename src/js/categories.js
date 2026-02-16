@@ -10,21 +10,27 @@ import { initTargetLanguageSelector } from "./targetLanguageUI.js";
 document.addEventListener("DOMContentLoaded", async () => {
   await loadHeaderFooter();
   applyLanguage();
-  renderCategories();
   initTargetLanguageSelector();
   wireHeaderLangToggle();
+  renderCategories();
 });
+
+let selectedCategory = null;
+if (selectedCategory) loadCategory(selectedCategory);
 
 function wireHeaderLangToggle() {
   const btn = document.querySelector("#lang-toggle");
   btn?.addEventListener("click", () => {
     toggleLang();
     applyLanguage();
+    renderCategories();
   });
 }
 
 function renderCategories() {
   const container = document.querySelector("#categories-list");
+  if (!container) return;
+
   const lang = getLang();
 
   container.innerHTML = Object.keys(categorySeeds)
@@ -37,7 +43,7 @@ function renderCategories() {
     )
     .join("");
 
-  document.querySelectorAll(".category-item").forEach((item) => {
+  container.querySelectorAll(".category-item").forEach((item) => {
     item.addEventListener("click", () => {
       loadCategory(item.dataset.id);
     });
@@ -45,6 +51,7 @@ function renderCategories() {
 }
 
 async function loadCategory(categoryId) {
+  selectedCategory = categoryId;
   const target = getTargetLang();
   const words = categorySeeds[categoryId];
   const output = document.querySelector("#category-words");
@@ -52,7 +59,9 @@ async function loadCategory(categoryId) {
   output.innerHTML = "Loading...";
 
   const translated = await Promise.all(
-    words.map((word) => translateText({ text: word, from: "en", to: target }))
+    words.map((word) =>
+      translateText({ text: word, from: "en" || "es", to: target })
+    )
   );
 
   output.innerHTML = translated
