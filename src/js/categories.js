@@ -56,7 +56,7 @@ async function loadCategory(categoryId) {
   const words = categorySeeds[categoryId];
   const output = document.querySelector("#category-words");
 
-  output.innerHTML = "Loading...";
+  output.innerHTML = getLang() === "es" ? "Cargando..." : "Loading...";
 
   const translated = await Promise.all(
     words.map((word) =>
